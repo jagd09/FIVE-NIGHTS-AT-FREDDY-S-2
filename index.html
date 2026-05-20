@@ -1,8 +1,11 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FIVE NIGHT'S AT FREDDY'S 2</title>
+
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,34 +30,11 @@
 
         nav {
             background-color: #e5ff00;
-            width: 100%;
-            height: auto;
-            float: none;
-            padding: 10px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav ul li {
-            padding: 10px;
-            font-size: 18px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
         }
 
         nav ul li a:hover {
             background-color: red;
-            color: white;
+            color: white !important;
             padding: 5px;
             border-radius: 5px;
         }
@@ -167,7 +147,10 @@
         #jumpscare-container {
             display: none;
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background-color: black;
             z-index: 9999;
             justify-content: center;
@@ -178,134 +161,321 @@
             max-width: 90vw;
             max-height: 90vh;
         }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            article,
+            aside {
+                width: 100%;
+                float: none;
+                margin: 0;
+            }
+
+            #asd {
+                position: static;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            #ttl1 {
+                font-size: 30px;
+            }
+
+            #txt1,
+            .txt2,
+            .txt4 {
+                font-size: 18px;
+            }
+
+            iframe,
+            video,
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            section {
+                margin: 10px;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
+
 <body>
+
     <header>TU ERES GAY VDD JUAN ESNEY?</header>
 
-    <nav>
-        <ul>
-            <li><a href="#ttl1">Fecha de estreno</a></li>
-            <li><a href="#video1">Teaser trailer</a></li>
-            <li><a href="#txt3">Top 10 cosas que seguramente no viste</a></li>
-            <li><a href="#tbl2">Presupuesto</a></li>
-            <li><a id="sorpresa-btn">El secreto de Freddy</a></li>
-        </ul>
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-warning bg-warning">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold" href="#">FNAF 2</a>
+
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="#ttl1">Fecha de estreno</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="#video1">Teaser trailer</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="#txt3">
+                            Top 10 cosas que seguramente no viste
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" href="#tbl2">Presupuesto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-dark" id="sorpresa-btn">
+                            El secreto de Freddy
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <section>
+
         <h1>Five Nights at Freddy's 2, ¿cuál será su trama, elenco entre otros?</h1>
 
         <aside id="asd">
-            <p>¿Sabías que...? El creador de FNAF, Scott Cawthon, originalmente hacía juegos cristianos... pero como sus personajes parecían animatrónicos terroríficos sin querer, ¡eso fue lo que inspiró la idea para FNAF!</p>
-            <p>Sabías que en los créditos finales de FNAF 1, algunos fans aseguran haber escuchado un susurro muy leve diciendo “I’m still here”? Nunca fue confirmado por Scott… pero tampoco lo negó. 😨</p>
+
+            <p>
+                ¿Sabías que...? El creador de FNAF, Scott Cawthon,
+                originalmente hacía juegos cristianos... pero como sus personajes
+                parecían animatrónicos terroríficos sin querer,
+                ¡eso fue lo que inspiró la idea para FNAF!
+            </p>
+
+            <p>
+                Sabías que en los créditos finales de FNAF 1,
+                algunos fans aseguran haber escuchado un susurro muy leve diciendo
+                “I’m still here”? Nunca fue confirmado por Scott…
+                pero tampoco lo negó. 😨
+            </p>
+
         </aside>
 
         <article>
-            <img src="IMAGENES/fnaf 2.png.jpg" width="900" height="650" alt="Imagen teaser FNAF 2">
+
+            <!-- IMAGEN RESPONSIVE -->
+            <img src="IMAGENES/fnaf 2.png.jpg"
+                class="img-fluid rounded"
+                alt="Imagen teaser FNAF 2">
 
             <h2 id="ttl1">Fecha de estreno</h2>
-            <p id="txt1">La primera entrega de FNAF fue estrenada en 2014, y su secuela llegó tan solo unos meses después, el 10 de noviembre del mismo año. Aunque la película aún no tiene fecha oficial, se rumorea que podría estrenarse en 2025 si la producción sigue avanzando sin contratiempos.</p>
+
+            <p id="txt1">
+                La primera entrega de FNAF fue estrenada en 2014,
+                y su secuela llegó tan solo unos meses después,
+                el 10 de noviembre del mismo año.
+                Aunque la película aún no tiene fecha oficial,
+                se rumorea que podría estrenarse en 2025
+                si la producción sigue avanzando sin contratiempos.
+            </p>
 
             <h2 id="video1">Teaser trailer</h2>
-            <iframe width="900" height="500" src="https://www.youtube.com/embed/B_6IPWiK16M?si=xPqqNxJLGhAnUqbr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!-- VIDEO RESPONSIVE -->
+            <div class="ratio ratio-16x9">
+
+                <iframe
+                    src="https://www.youtube.com/embed/B_6IPWiK16M?si=xPqqNxJLGhAnUqbr"
+                    title="YouTube video player"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
 
             <h2 id="txt3">Top 10 cosas que seguramente no viste</h2>
+
             <p class="txt2">
+
                 1. Bonnie sin cara aparece en el fondo brevemente en una escena del trailer.<br>
-                2. El logo del restaurante tiene un pequeño error de ortografía a propósito, como referencia al juego.<br>
-                3. En una toma rápida, se ve una figura escondida que muchos creen que es Golden Freddy.<br>
+
+                2. El logo del restaurante tiene un pequeño error de ortografía a propósito,
+                como referencia al juego.<br>
+
+                3. En una toma rápida, se ve una figura escondida que muchos creen que es
+                Golden Freddy.<br>
+
                 4. Gracias al teaser sabemos que hay 19 animatrónicos hasta el momento.<br>
+
                 5. William Afton volverá y va a atormentar a Vanessa.<br>
+
                 6. Los animatrónicos ahora van a atacar fuera de la pizzería.<br>
+
                 7. Los animatrónicos tienen ojos que cambian de color.<br>
-                8. En el tráiler, en varias escenas hay un sonido extraño de respiración profunda.<br>
-                9. Hay sonidos de estática y interferencias eléctricas que aumentan justo antes de aparecer los animatrónicos.<br>
+
+                8. En el tráiler, en varias escenas hay un sonido extraño
+                de respiración profunda.<br>
+
+                9. Hay sonidos de estática e interferencias eléctricas
+                que aumentan justo antes de aparecer los animatrónicos.<br>
+
                 10. Casi a la mitad del tráiler se escucha la caja musical del Puppet.
+
             </p>
 
             <h2 id="tbl2">Presupuesto</h2>
-            <table>
-                <thead id="tbl1">
-                    <tr>
-                        <th>Película</th>
-                        <th>Presupuesto estimado</th>
-                        <th>Recaudación</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>FNAF 1</td>
-                        <td>20 millones USD</td>
-                        <td>130 millones USD</td>
-                    </tr>
-                    <tr>
-                        <td>FNAF 2 (estimado)</td>
-                        <td>Entre 36 y 51 millones USD</td>
-                        <td>Mas de 239 millones USD</td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead id="tbl1">
+
+                        <tr>
+                            <th>Película</th>
+                            <th>Presupuesto estimado</th>
+                            <th>Recaudación</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>FNAF 1</td>
+                            <td>20 millones USD</td>
+                            <td>130 millones USD</td>
+                        </tr>
+
+                        <tr>
+                            <td>FNAF 2 (estimado)</td>
+                            <td>Entre 36 y 51 millones USD</td>
+                            <td>Más de 239 millones USD</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
         </article>
+
     </section>
 
     <!-- Contenedor del jumpscare -->
+
     <div id="jumpscare-container">
-        <video id="jumpscare-video" src="jumpscare/FNaF 4_ Nightmare Foxy Jumpscare.mp4" preload="auto"></video>
-        <audio id="jumpscare-audio" src="jumpscare/FNaF 4_ Nightmare Foxy Jumpscare.mp3" preload="auto"></audio>
+
+        <video id="jumpscare-video"
+            src="jumpscare/FNaF 4_ Nightmare Foxy Jumpscare.mp4"
+            preload="auto">
+        </video>
+
+        <audio id="jumpscare-audio"
+            src="jumpscare/FNaF 4_ Nightmare Foxy Jumpscare.mp3"
+            preload="auto">
+        </audio>
+
     </div>
 
     <footer>
-        <p>Juan Andrés Giraldo Díaz<br>
-        Contacto: juanandresgiraldodiaz@gmail.com<br>
-        Teléfono: 3134564786</p>
+
+        <p>
+            Juan Andrés Giraldo Díaz<br>
+
+            Contacto: juanandresgiraldodiaz@gmail.com<br>
+
+            Teléfono: 3134564786
+        </p>
+
     </footer>
 
     <audio id="miAudio" src="Audios/La caja de puppet tono.mp3"></audio>
 
     <script>
-        // Audio de la caja de puppet que se reproduce una sola vez al primer clic en la página
+
+        // Audio de la caja de puppet que se reproduce una sola vez al primer clic
+
         const audio = document.getElementById('miAudio');
-    
+
         function reproducirPorQuinceSegundosYCincoDecimas() {
+
             audio.play();
+
             setTimeout(() => {
+
                 audio.pause();
                 audio.currentTime = 0;
-            }, 15500); // 15,500 ms = 15.5 segundos
+
+            }, 15500);
+
         }
-    
+
         document.body.addEventListener('click', () => {
+
             reproducirPorQuinceSegundosYCincoDecimas();
+
         }, { once: true });
 
         // Jumpscare
+
         const sorpresaBtn = document.getElementById('sorpresa-btn');
+
         const jumpscareContainer = document.getElementById('jumpscare-container');
+
         const jumpscareVideo = document.getElementById('jumpscare-video');
+
         const jumpscareAudio = document.getElementById('jumpscare-audio');
 
         sorpresaBtn.addEventListener('click', () => {
+
             // Mostrar jumpscare
+
             jumpscareContainer.style.display = 'flex';
 
             // Reiniciar y reproducir video y audio juntos
+
             jumpscareVideo.currentTime = 0;
+
             jumpscareAudio.currentTime = 0;
+
             jumpscareVideo.play();
+
             jumpscareAudio.play();
 
             // Cuando termina el video, ocultar jumpscare
+
             jumpscareVideo.onended = () => {
+
                 jumpscareContainer.style.display = 'none';
+
             };
+
         });
+
     </script>
 
-    <!-- Bootstrap JS (opcional, para componentes interactivos) -->
+    <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
-
 
